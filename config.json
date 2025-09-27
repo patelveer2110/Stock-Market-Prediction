@@ -1,0 +1,9 @@
+{
+  "tickers": ["RELIANCE.NS","HDFCBANK.NS","ICICIBANK.NS","TCS.NS","INFY.NS","BHARTIARTL.NS","HINDUNILVR.NS","BAJFINANCE.NS","HAL.NS","BSE.NS"],
+  "nifty": "^NSEI",
+  "start": "2010-01-01",
+  "lookback": 60,
+  "short_horizon": 1,
+  "long_horizon": 30,
+  "models": ["svm","rf","xgb","lstm","lstm_cnn"]
+}

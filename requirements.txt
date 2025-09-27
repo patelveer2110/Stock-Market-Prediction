@@ -1,0 +1,12 @@
+pandas
+numpy
+yfinance
+ta
+scikit-learn
+xgboost
+joblib
+matplotlib
+seaborn
+tensorflow==2.14.1
+jupyter
+notebook

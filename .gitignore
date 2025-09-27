@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.vscode/
+.env
+venv/
+models/
+results/
+data/raw/
+data/processed/
+.drive/
+.DS_Store
