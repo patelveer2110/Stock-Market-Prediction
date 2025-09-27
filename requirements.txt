@@ -7,6 +7,6 @@ xgboost
 joblib
 matplotlib
 seaborn
-tensorflow==2.14.1
+tensorflow
 jupyter
 notebook
