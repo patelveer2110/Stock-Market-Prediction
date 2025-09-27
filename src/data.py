@@ -3,7 +3,7 @@ import os
 import pandas as pd
 import yfinance as yf
 from datetime import datetime
-from .features import add_all_indicators
+from src.features import add_all_indicators
 
 DATA_DIR = os.path.join(os.getcwd(), 'data')
 RAW_DIR = os.path.join(DATA_DIR, 'raw')
@@ -48,3 +48,14 @@ def load_processed(ticker: str) -> pd.DataFrame:
     if not os.path.exists(path):
         raise FileNotFoundError(f"Processed file not found: {path}")
     return pd.read_csv(path, index_col=0, parse_dates=True)
+
+def download_and_save(ticker: str, out_dir=RAW_DIR, start="2010-01-01", end=None, interval="1d"):
+    """
+    Simple wrapper: download raw data and save it.
+    Returns the dataframe.
+    """
+    df = download_ticker(ticker, start=start, end=end, interval=interval)
+    os.makedirs(out_dir, exist_ok=True)
+    path = os.path.join(out_dir, f"{ticker}.csv")
+    df.to_csv(path)
+    return df
