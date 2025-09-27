@@ -9,3 +9,4 @@ if __name__ == "__main__":
     df = download_and_save(ticker, "data/raw")
     df_feat = add_all_indicators(df)
     print(df_feat.head())
+    # tgrfd
